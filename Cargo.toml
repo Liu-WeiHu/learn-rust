@@ -16,6 +16,7 @@ members = [
     "macro_rules/macro_rules-debug",
     "macro_rules/macro_rules-demo1",
     "macro_rules/macro_rules-demo2",
+    "macro_rules/macro_rules-demo3",
     # proc-macro
     "proc-macro/proc-macro-demo1",
     "proc-macro/proc-macro-seq",

@@ -1,3 +1,5 @@
+#![feature(trace_macros)]
+
 /* macro_rules! as_expr {
     ($e: expr) => {$e}
 }
@@ -83,12 +85,24 @@ macro_rules! replace_expr {
 }  */
 
 macro_rules! call_a_or_b_on_tail {
-    ((a: $a:ident, b: $b:ident), call a: $($tail:tt)*) => {
+    ((a: $a:ident, b:$b:ident), call a: $($tail:tt)*) => {
         $a(stringify!($($tail)*))
     };
-    () => {};
-    () => {};
-    () => {};
+    ((a: $a:ident, b:$b:ident), call b: $($tail:tt)*) => {
+        $b(stringify!($($tail)*))
+    };
+    ($ab:tt, $_skip:tt $($tail:tt)*) => {
+        call_a_or_b_on_tail!($ab, $($tail)*)
+    };
+}
+
+fn compute_len(s: &str) -> Option<usize> {
+    Some(s.len())
+}
+
+fn show_tail(s: &str) -> Option<usize> {
+    println!("tail: {:?}", s);
+    None
 }
 
 fn main() {
@@ -101,4 +115,24 @@ fn main() {
     let s: [String; 3] = init_array![String::from("hi!"); 3];
     trace_macros!(false);
     println!("{:?}", s); */
+
+   
+    call_a_or_b_on_tail!(
+        (a: compute_len, b: show_tail),
+        the recursive part that skips over all these
+        tokens doesn't much care whether we will call a
+        or call b: only the terminal rules care.
+    );
+   
+    
+    trace_macros!(true);
+    let s = call_a_or_b_on_tail!(
+        (a: compute_len, b: show_tail),
+        and now, to justify the existence of two paths
+        we will also call a: its input should somehow
+        be self-referential, so let's make it return
+        some eighty-six!
+    );
+    trace_macros!(false);
+    println!("{}", s.unwrap());
 }
