@@ -1,0 +1,26 @@
+[package]
+name = "learn-rust"
+version = "0.1.0"
+authors = ["WeiHu Liu <6460176@qq.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[workspace]
+members = [
+    # benchmark
+    "benchmark/learn-benchmark",
+    # macro_rules
+    "macro_rules/macro_rules-debug",
+    "macro_rules/macro_rules-demo1",
+    "macro_rules/macro_rules-demo2",
+    "macro_rules/macro_rules-demo3",
+    # proc-macro
+    "proc-macro/proc-macro-demo1",
+    "proc-macro/proc-macro-seq",
+    "proc-macro/attribute-demo1",
+    "proc-macro/attribute-sorted",
+    "proc-macro/derive-builder",
+]
