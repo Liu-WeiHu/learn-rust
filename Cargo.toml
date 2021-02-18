@@ -23,4 +23,6 @@ members = [
     "proc-macro/attribute-demo1",
     "proc-macro/attribute-sorted",
     "proc-macro/derive-builder",
+    # learn rust web (actix-web)
+    "actix-web/rust-web-project"
 ]
