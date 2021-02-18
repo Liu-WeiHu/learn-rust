@@ -9,7 +9,7 @@ meta：元项目；这里面去的东西#[...]和#![...]属性
 pat： 模式，普通模式匹配（非宏本身的模式）中的模式，例如 Some(t), (3, 'a', _)
 path：一个路径（例如foo，::std::mem::replace，transmute::<_, int>，...）
 stmt： 单条语句，如 let a = 42;
-tt：单个令牌树
+tt：单个令牌树 匹配分隔符()、[]或{}中的一个或多个标记
 ty： 类型 (例如i32, bool, ...)
 vis：权限（例如pub，pub(in crate)，...）
 */
