@@ -30,6 +30,54 @@ mod tests {
         });
     }
 
+    #[bench]
+    fn bench_base64_encode(b: &mut Bencher) {
+        b.iter(|| {
+            base64::encode(b"aaaa")
+        });
+    }
+
+    #[bench]
+    fn bench_base64_decode(b: &mut Bencher) {
+        b.iter(|| {
+            base64::decode("aaaa")
+        });
+    }
+
+    #[bench]
+    fn bench_parse_int(b: &mut Bencher) {
+        b.iter(|| {
+            "10".parse::<isize>()
+        });
+    }
+
+    #[test]
+    fn test_base64_decode() {
+        let src = base64::decode(
+            "bWFnbmV0Oj94dD11cm46YnRpaDo4MjE2YTZhM2VjNjMyMWZjMmIzYjE4MGE1Zjk0YTU2MDVjNTc5OTE4JmRuPeiQjOaxgQ=="
+        ).unwrap();
+        let src: &str = std::str::from_utf8(&src).unwrap();
+        println!("{}", src);
+    }
+
+    #[bench]
+    fn bench_sum(b: &mut Bencher) {
+        //let mut arr: [usize;10000] = [0;10000]; 
+        b.iter(move || {
+            //let _s = (0..10000).map(|i|i+5).collect::<Vec<i32>>();
+            //let _s = (0..).take(10000).map(|i|i+5).collect::<Vec<i32>>();
+            /* for i in 0..10000 {
+                arr[i] = i+5
+            } */
+        });
+    }
+
+    #[test]
+    fn test_sum() {
+        let s = (0..15).map(|i| i+5 ).collect::<Vec<i32>>();
+        println!("{:?}", s);
+    }
+
 }
 
 pub fn add_two(a: i32) -> i32 {

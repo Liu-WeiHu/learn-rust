@@ -1,5 +1,5 @@
 [package]
-name = "learn-benchmark"
+name = "derive-demo1"
 version = "0.1.0"
 authors = ["WeiHu Liu <6460176@qq.com>"]
 edition = "2018"
@@ -7,4 +7,4 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-base64 = "0.13.0"
+into_map_derive = {path = "./into_map_derive"}

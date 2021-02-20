@@ -23,6 +23,9 @@ members = [
     "proc-macro/attribute-demo1",
     "proc-macro/attribute-sorted",
     "proc-macro/derive-builder",
+    "proc-macro/derive-demo1",
     # learn rust web (actix-web)
-    "actix-web/rust-web-project"
+    "actix-web/rust-web-project",
+    # wasm
+    "wasm/wasm-game-of-life",
 ]
