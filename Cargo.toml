@@ -27,7 +27,7 @@ members = [
     # learn rust web (actix-web)
     "actix-web/rust-web-project",
     # demo
-    "demo/linked-list",
+    "demo/binary-tree",
     # test
     "test/test-example",
 ]

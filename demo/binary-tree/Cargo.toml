@@ -1,5 +1,5 @@
 [package]
-name = "linked-list"
+name = "binary-tree"
 version = "0.1.0"
 authors = ["liuweihu <6460176@qq.com>"]
 edition = "2018"
