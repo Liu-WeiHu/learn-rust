@@ -26,6 +26,4 @@ members = [
     "proc-macro/derive-demo1",
     # learn rust web (actix-web)
     "actix-web/rust-web-project",
-    # wasm
-    "wasm/wasm-game-of-life",
 ]
