@@ -26,4 +26,8 @@ members = [
     "proc-macro/derive-demo1",
     # learn rust web (actix-web)
     "actix-web/rust-web-project",
+    # demo
+    "demo/linked-list",
+    # test
+    "test/test-example",
 ]
