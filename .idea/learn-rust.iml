@@ -23,6 +23,11 @@
       <sourceFolder url="file://$MODULE_DIR$/proc-macro/proc-macro-seq/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test/test-example/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/trait/trait_enum/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/async-graphql/graphql-start/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/error/learn-error/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/error/learn-error2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/error/learn-try/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />

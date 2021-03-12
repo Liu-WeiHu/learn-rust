@@ -30,4 +30,10 @@ members = [
     "demo/binary-tree",
     # test
     "test/test-example",
+    # trait
+    "trait/trait_enum",
+    # error
+    "error/learn-error",
+    "error/learn-try",
+    "error/learn-error2",
 ]
