@@ -36,4 +36,9 @@ members = [
     "error/learn-error",
     "error/learn-try",
     "error/learn-error2",
+    # sqlx
+    "sqlx/learn-sqlx",
+    # async
+    "async/learn-async",
+    "async/learn-async-simple_future",
 ]

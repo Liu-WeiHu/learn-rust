@@ -28,6 +28,9 @@
       <sourceFolder url="file://$MODULE_DIR$/error/learn-error/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/error/learn-error2/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/error/learn-try/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/async/learn-async-simple_future/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/async/learn-async/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sqlx/learn-sqlx/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
