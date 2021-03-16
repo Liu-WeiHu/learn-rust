@@ -1,5 +1,5 @@
 [package]
-name = "learn-async-simple_future"
+name = "learn-async_await"
 version = "0.1.0"
 authors = ["liuweihu <6460176@qq.com>"]
 edition = "2018"

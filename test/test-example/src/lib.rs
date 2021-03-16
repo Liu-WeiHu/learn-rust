@@ -1,3 +1,4 @@
+#![allow(unused)]
 use std::thread::sleep;
 use std::time::Duration;
 
@@ -60,15 +61,6 @@ fn test_if_let() {
         assert_eq!(name, "aa".to_string())
     }
 }
-#[test]
-fn test_demo() {
-    let mut a = [1,2,3];
-    let x = &mut a;
-
-    let z = &x;
-    (*z)[0] = 11;
-    println!("{:?}", a);
-}
 
 #[test]
 fn test_dd() {
@@ -76,4 +68,48 @@ fn test_dd() {
     let aa = &mut a;
     *aa = 55;
     println!("{}", a);
+}
+
+#[test]
+fn test_address() {
+    let arr = [0;10];
+    println!("[arr] as_ptr : {:?}", arr.as_ptr());
+    println!("[arr] :p : {:p}", &arr);
+    println!("[arr] size-of : {}", std::mem::size_of::<&[i32;10]>());
+    println!("[arr] size-of-val : {}", std::mem::size_of_val(&arr));
+
+    let arr: &[i32] = &arr[..];
+    println!("[slice] as_ptr : {:?}", arr.as_ptr());
+    println!("[slice] :p : {:p}", &arr);
+    println!("[slice] size-of : {}", std::mem::size_of::<&[i32]>());
+    println!("[slice] size-of-val : {}", std::mem::size_of_val(arr));
+
+    let arr: &[i32] = &arr[..5];
+    println!("[slice2] as_ptr : {:?}", arr.as_ptr());
+    println!("[slice2] :p : {:p}", &arr);
+    println!("[slice2] size-of : {}", std::mem::size_of::<&[i32]>());
+    println!("[slice2] size-of-val : {}", std::mem::size_of_val(arr));
+
+   /* let arr: &[i32] = &[0;10];
+    println!("[slice] as_ptr : {:?}", arr.as_ptr());
+    println!("[slice] :p : {:p}", &arr);
+    println!("[slice] size-of : {}", std::mem::size_of::<&[i32]>());
+    println!("[slice] size-of-val : {}", std::mem::size_of_val(arr));
+
+    let arr = vec![0;10];
+    println!("[vec] as_ptr : {:?}", arr.as_ptr());
+    println!("[vec] :p : {:p}", &arr);
+    println!("[vec] size-of : {}", std::mem::size_of::<&Vec<i32>>());
+    println!("[vec] size-of-val : {}", std::mem::size_of_val(&arr));*/
+
+
+}
+
+#[test]
+fn test_d() {
+    let s = "aa".to_string();
+    let ss = &s as *const String;
+    let sss;
+    unsafe {sss = &*ss}
+    println!("{}", sss);
 }

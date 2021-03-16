@@ -1,13 +1,9 @@
-fn main() {
-    println!("Hello, world!");
-}
-
-trait SimpleFuture {
+pub trait SimpleFuture {
     type Output;
     fn poll(&mut self, wake: fn()) -> Poll<Self::Output>;
 }
 
-enum Poll<T> {
+pub enum Poll<T> {
     Ready(T),
     Pending,
 }
@@ -40,8 +36,13 @@ impl SimpleFuture for SocketRead<'_> {
 
     fn poll(&mut self, wake: fn()) -> Poll<Self::Output> {
         if self.socket.has_data_to_read() {
+            // `socket` 有数据的时候将其读取并放置在缓冲区并返回.
             Poll::Ready(self.socket.read_buf())
         } else {
+            // `socket` 还没有数据.
+            //
+            // 当数据来到，将调用 `wake`.
+            // 这个 `future` 的调用者将知道何时调用 `poll` 并接收数据.
             self.socket.set_readable_callback(wake);
             Poll::Pending
         }

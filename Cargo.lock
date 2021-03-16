@@ -1179,7 +1179,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "learn-async-simple_future"
+name = "learn-async_await"
 version = "0.1.0"
 dependencies = [
  "futures",
@@ -1205,6 +1205,13 @@ name = "learn-error2"
 version = "0.1.0"
 dependencies = [
  "thiserror",
+]
+
+[[package]]
+name = "learn-future2"
+version = "0.1.0"
+dependencies = [
+ "futures",
 ]
 
 [[package]]

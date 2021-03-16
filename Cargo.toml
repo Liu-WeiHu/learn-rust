@@ -39,6 +39,7 @@ members = [
     # sqlx
     "sqlx/learn-sqlx",
     # async
-    "async/learn-async",
-    "async/learn-async-simple_future",
+    "async/learn-future",
+    "async/learn-future2",
+    "async/learn-async_await",
 ]
