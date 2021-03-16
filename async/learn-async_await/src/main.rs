@@ -1,7 +1,14 @@
 use std::future::Future;
+use std::marker::PhantomPinned;
+use std::pin::Pin;
 
 fn main() {
-    futures::executor::block_on(blocks());
+    //futures::executor::block_on(blocks());
+    let mut test1 = Test::new("test1");;
+    let mut test2 = Test::new("test2");
+
+    println!("a: {},b: {}", test1.as_ref().get_a(), test2.as_ref().get_b());
+    println!("a: {},b: {}", test2.as_ref().get_a(), test2.as_ref().get_b());
 }
 
 async fn blocks() {
@@ -22,26 +29,27 @@ async fn blocks() {
 struct Test {
     a: String,
     b: *const String,
+    _marker: PhantomPinned,
 }
 
 impl Test {
-    fn new(txt: &str) -> Self {
-        Test {
+    fn new(txt: &str) -> Pin<Box<Self>> {
+        let t = Test {
             a: txt.to_string(),
             b: std::ptr::null(),
-        }
+            _marker: PhantomPinned,
+        };
+        let mut boxed = Box::pin(t);
+        let self_ptr: *const String = &boxed.as_ref().a;
+        unsafe{boxed.as_mut().get_unchecked_mut().b = self_ptr};
+        boxed
     }
 
-    fn init(&mut self) {
-        let self_ref: *const String = &self.a;
-        self.b = self_ref;
+    fn get_a<'a>(self: Pin<&'a Self>) -> &'a str {
+        &self.get_ref().a
     }
 
-    fn get_a(&self) -> &str {
-        &self.a
-    }
-
-    fn get_b(&self) -> &String {
-        unsafe {&self.b}
+    fn get_b<'a>(self: Pin<&'a Self>) -> &'a String {
+        unsafe {&*self.b}
     }
 }

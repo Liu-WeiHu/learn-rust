@@ -42,4 +42,5 @@ members = [
     "async/learn-future",
     "async/learn-future2",
     "async/learn-async_await",
+    "async/learn-stream",
 ]

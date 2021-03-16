@@ -32,6 +32,7 @@
       <sourceFolder url="file://$MODULE_DIR$/async/learn-future/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/sqlx/learn-sqlx/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/async/learn-async_await/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/async/learn-stream/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />

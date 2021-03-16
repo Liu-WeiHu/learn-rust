@@ -1227,6 +1227,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "learn-stream"
+version = "0.1.0"
+
+[[package]]
 name = "learn-try"
 version = "0.1.0"
 
