@@ -1,6 +1,8 @@
 #![allow(unused)]
 use std::thread::sleep;
 use std::time::Duration;
+use std::ops::Deref;
+use std::rc::Rc;
 
 #[test]
 fn test_hello() {
@@ -107,9 +109,98 @@ fn test_address() {
 
 #[test]
 fn test_d() {
-    let s = "aa".to_string();
-    let ss = &s as *const String;
-    let sss;
-    unsafe {sss = &*ss}
-    println!("{}", sss);
+    let mut output = 10;
+    compute(&7, &mut output);
+    println!("{}", output);
+}
+
+fn compute(input: &u32, output: &mut u32) {
+    let mut temp = *output;
+    if *input > 10 {
+        temp = 1;
+    }
+    if *input > 5 {
+        temp *= 2;
+    }
+    *output = temp;
+}
+
+#[test]
+fn test_lifetime() {
+    let mut a = vec![1,2,3];
+    let b = &a[0];
+    a.push(4);
+    //println!("{}", b);
+}
+
+struct Foo;
+
+impl Foo {
+    fn mutate_and_share(&mut self) -> &Self {&*self}
+    fn share(&self) {}
+}
+
+#[test]
+fn test_life() {
+    let mut s = Rc::new("aa".to_string());
+    let ss = s.clone();
+    //s.push_str("bb");
+    println!("{}", s);
+}
+
+#[test]
+fn test_ab() {
+    let s = Student;
+    s.say_work();
+    <Student as Work>::a();
+}
+
+trait Work {
+    fn say_work(&self);
+
+    fn a() {
+        println!("wo shi work")
+    }
+}
+
+struct Student;
+
+impl Work for Student {
+    fn say_work(&self) {
+        println!("wo shi student")
+    }
+}
+
+impl Student {
+    fn a() {
+        println!("wo shi student")
+    }
+}
+
+#[test]
+fn test_tuple() {
+    let tuple = (1,);
+    let t2 = (1,"aa","a".to_string(),false);
+}
+
+#[test]
+fn test_ref() {
+    let mut s = "aa".to_string();
+    let mut ss = &mut s;
+    ss.push_str("cc");
+    let mut sss = &mut s;
+    sss.push_str("bb");
+    s.push_str("dd");
+    println!("{}", s);
+}
+
+#[test]
+fn test_bibao() {
+    let mut f = counter(3);
+    println!("{}", f(2));
+}
+
+fn counter(i: i32) -> impl FnMut(i32) -> i32 {
+    let mut i = i;
+    move |n| {i += 10; n + i}
 }
