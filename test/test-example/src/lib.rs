@@ -242,3 +242,36 @@ impl<T> Deref for MyBox<T> {
         &self.0
     }
 }
+
+// #[test]
+// fn test_aa() {
+//     let mut a = vec![1,2,3,4];
+//
+//     for (i,v) in a.iter_mut().enumerate() {
+//         if a[i] == 2 {
+//             a[i] = 22;
+//         }
+//     }
+//
+//     //println!("{:?}", a);
+// }
+
+#[test]
+fn test_asd() {
+    let mut s = 22;
+    let ss = &mut s;
+    let sss = &s;
+    *ss = 44;
+    //println!("{:?}", sss);
+    //sss;
+}
+
+
+#[test]
+fn test_abv() {
+    let mut a = vec![1,2];
+    let aa = &a;
+    //a.push(1);
+    let dd = &mut a;
+    //aa;
+}
