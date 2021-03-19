@@ -204,3 +204,41 @@ fn counter(i: i32) -> impl FnMut(i32) -> i32 {
     let mut i = i;
     move |n| {i += 10; n + i}
 }
+
+#[test]
+fn test_deref(){
+    let u = U{name: "zhang san".to_string()};
+    let u = MyBox::new(u);
+    let name = u.get_name();
+    U::test(&u);
+    println!("{}",name );
+}
+
+struct U {
+    name: String,
+}
+
+impl U {
+    fn get_name(&self) -> &String {
+        &self.name
+    }
+
+    fn test(u: &U) {
+        println!("{}",u.name);
+    }
+}
+
+struct MyBox<T>(T);
+impl <T> MyBox<T> {
+    fn new(x: T) -> MyBox<T> {
+        MyBox(x)
+    }
+}
+
+impl<T> Deref for MyBox<T> {
+    type Target = T;
+
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}

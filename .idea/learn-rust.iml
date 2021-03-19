@@ -33,6 +33,7 @@
       <sourceFolder url="file://$MODULE_DIR$/sqlx/learn-sqlx/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/async/learn-async_await/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/async/learn-stream/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/toml-demo/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />

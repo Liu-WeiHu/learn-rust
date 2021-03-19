@@ -28,6 +28,7 @@ members = [
     "actix-web/rust-web-project",
     # demo
     "demo/binary-tree",
+    "demo/toml-demo",
     # test
     "test/test-example",
     # trait
