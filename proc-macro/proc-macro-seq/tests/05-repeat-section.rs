@@ -1,6 +1,6 @@
 // So far our macro has repeated the entire loop body. This is not sufficient
 // for some use cases because there are restrictions on the syntactic position
-// that macro invocations can appear in. For example the Rust grammar would not
+// that macro invocations can appear in. For examples the Rust grammar would not
 // allow a caller to write:
 //
 //     enum Interrupt {

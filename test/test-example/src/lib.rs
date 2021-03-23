@@ -261,7 +261,7 @@ fn test_asd() {
     let mut s = 22;
     let ss = &mut s;
     let sss = &s;
-    *ss = 44;
+    //*ss = 44;
     //println!("{:?}", sss);
     //sss;
 }
@@ -273,5 +273,44 @@ fn test_abv() {
     let aa = &a;
     //a.push(1);
     let dd = &mut a;
+    //let cc = &mut a;
+    dd;
     //aa;
+    //aa;
+}
+
+#[test]
+fn test_str() {
+    let s1="hello";
+    let s2 = "hello";
+    println!("&s1 : {:p}", &s1);
+    println!("&s2 : {:p}", &s2);
+
+    let s1 = s1.as_ptr();
+    let s2 = s2.as_ptr();
+    println!("s1 ptr : {:p}", s1);
+    println!("s2 ptr : {:p}", s2);
+}
+
+fn  remove_prefix<'a>(content:&'a str,prefix:&str) -> &'a str{
+    if content.starts_with(prefix){
+        let start:usize = prefix.len();
+        let end:usize = content.len();
+        let sub = content.get(start..end).unwrap();
+        sub
+    }else{
+        content
+    }
+}
+
+#[test]
+fn test_life2() {
+    let  s = "reload";
+    let sub = remove_prefix(&s,"re");
+    println!("{}",sub);
+}
+
+#[test]
+fn test_fn() {
+
 }

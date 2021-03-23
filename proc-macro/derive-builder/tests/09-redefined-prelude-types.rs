@@ -5,7 +5,7 @@
 // practice. Most commonly for Result, where crates sometimes use a Result type
 // alias with a single type parameter which assumes their crate's error type.
 // Such a type alias would break macro-generated code that expects Result to
-// have two type parameters. As another example, Hyper 0.10 used to define
+// have two type parameters. As another examples, Hyper 0.10 used to define
 // hyper::Ok as a re-export of hyper::status::StatusCode::Ok which is totally
 // different from Result::Ok. This caused problems in code doing `use hyper::*`
 // together with macro-generated code referring to Ok.

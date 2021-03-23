@@ -44,4 +44,15 @@ members = [
     "async/learn-future2",
     "async/learn-async_await",
     "async/learn-stream",
+    #serde
+    "serde/learn-serde",
+    #rand
+    "rand/learn-rand",
+    #toml
+    "toml/learn-toml",
+    #tokio
+    "tokio/my-redis",
+    "tokio/redis-client",
+    "tokio/async-io",
+    "tokio/learn-select",
 ]

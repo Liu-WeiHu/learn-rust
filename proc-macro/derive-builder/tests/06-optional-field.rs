@@ -10,10 +10,10 @@
 // expansion has finished completely. That means during the evaluation of a
 // procedural macro, "types" do not exist yet, only tokens. In general many
 // different token representations may end up referring to the same type: for
-// example `Option<T>` and `std::option::Option<T>` and `<Vec<Option<T>> as
+// examples `Option<T>` and `std::option::Option<T>` and `<Vec<Option<T>> as
 // IntoIterator>::Item` are all different names for the same type. Conversely,
 // a single token representation may end up referring to many different types in
-// different places; for example the meaning of `Error` will depend on whether
+// different places; for examples the meaning of `Error` will depend on whether
 // the surrounding scope has imported std::error::Error or std::io::Error. As a
 // consequence, it isn't possible in general for a macro to compare two token
 // representations and tell whether they refer to the same type.

@@ -34,6 +34,15 @@
       <sourceFolder url="file://$MODULE_DIR$/async/learn-async_await/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/async/learn-stream/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/demo/toml-demo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/rand/learn-rand/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/serde/learn-serde/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tokio/my-redis/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tokio/my-redis/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tokio/redis-client/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/toml/learn-toml/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tokio/async-io/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tokio/learn-select/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tokio/mini-redis-connection/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />

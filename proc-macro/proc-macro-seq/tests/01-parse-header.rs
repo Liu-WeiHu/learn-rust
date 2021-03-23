@@ -17,7 +17,7 @@
 //   - Parsing in Syn:
 //     https://docs.rs/syn/1.0/syn/parse/index.html
 //
-//   - An example of a function-like procedural macro implemented using Syn:
+//   - An examples of a function-like procedural macro implemented using Syn:
 //     https://github.com/dtolnay/syn/tree/master/examples/lazy-static
 
 use seq::seq;
