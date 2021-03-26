@@ -4,21 +4,21 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/actix-web/rust-web-project/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/benchmark/learn-benchmark/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/demo/binary-tree/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/demo/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/macro_rules/macro_rules-debug/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/macro_rules/macro_rules-demo1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/macro_rules/macro_rules-demo/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/macro_rules/macro_rules-demo2/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/macro_rules/macro_rules-demo3/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/proc-macro/attribute-demo1/attribute-demo1-lib/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/proc-macro/attribute-demo1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/proc-macro/attribute-demo/attribute-demo-lib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/proc-macro/attribute-demo/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/proc-macro/attribute-sorted/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/proc-macro/attribute-sorted/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/proc-macro/derive-builder/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/proc-macro/derive-builder/tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/proc-macro/derive-demo1/into_map_derive/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/proc-macro/derive-demo1/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/proc-macro/proc-macro-demo1/proc-macro-lib/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/proc-macro/proc-macro-demo1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/proc-macro/derive-demo/into_map_derive/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/proc-macro/derive-demo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/proc-macro/proc-macro-demo/proc-macro-lib/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/proc-macro/proc-macro-demo/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/proc-macro/proc-macro-seq/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/proc-macro/proc-macro-seq/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
@@ -43,6 +43,13 @@
       <sourceFolder url="file://$MODULE_DIR$/tokio/async-io/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tokio/learn-select/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tokio/mini-redis-connection/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tokio/learn-select/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/async/learn-future/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/reflect-demo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/error/learn-error/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/macro_rules/macro_rules-demo/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/macro_rules/macro_rules-demo4/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/demo/examples" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />

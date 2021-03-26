@@ -312,5 +312,15 @@ fn test_life2() {
 
 #[test]
 fn test_fn() {
-
+    let mut s = "aa".to_string();
 }
+
+#[test]
+fn test_duotai() {
+    let mut s = Studen;
+    let ss = &mut s  as &mut dyn Person;
+}
+
+trait Person {}
+struct Studen;
+impl Person for Studen{}

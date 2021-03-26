@@ -13,21 +13,18 @@ members = [
     # benchmark
     "benchmark/learn-benchmark",
     # macro_rules
-    "macro_rules/macro_rules-debug",
-    "macro_rules/macro_rules-demo1",
-    "macro_rules/macro_rules-demo2",
-    "macro_rules/macro_rules-demo3",
+    "macro_rules/macro_rules-demo",
     # proc-macro
-    "proc-macro/proc-macro-demo1",
+    "proc-macro/proc-macro-demo",
     "proc-macro/proc-macro-seq",
-    "proc-macro/attribute-demo1",
+    "proc-macro/attribute-demo",
     "proc-macro/attribute-sorted",
     "proc-macro/derive-builder",
-    "proc-macro/derive-demo1",
+    "proc-macro/derive-demo",
     # learn rust web (actix-web)
     "actix-web/rust-web-project",
     # demo
-    "demo/binary-tree",
+    "demo/demo",
     "demo/toml-demo",
     # test
     "test/test-example",
@@ -35,15 +32,10 @@ members = [
     "trait/trait_enum",
     # error
     "error/learn-error",
-    "error/learn-try",
-    "error/learn-error2",
     # sqlx
     "sqlx/learn-sqlx",
     # async
     "async/learn-future",
-    "async/learn-future2",
-    "async/learn-async_await",
-    "async/learn-stream",
     #serde
     "serde/learn-serde",
     #rand
@@ -52,7 +44,4 @@ members = [
     "toml/learn-toml",
     #tokio
     "tokio/my-redis",
-    "tokio/redis-client",
-    "tokio/async-io",
-    "tokio/learn-select",
 ]

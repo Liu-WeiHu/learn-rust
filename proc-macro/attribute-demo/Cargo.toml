@@ -1,0 +1,10 @@
+[package]
+name = "attribute-demo"
+version = "0.1.0"
+authors = ["WeiHu Liu <6460176@qq.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+attribute-demo-lib = {path = "attribute-demo-lib" }
