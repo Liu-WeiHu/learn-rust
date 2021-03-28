@@ -36,4 +36,11 @@ fn main() {
     let mut nums = [1,2,3,4,5];
     nums.shuffle(&mut rng);
     println!("I shuffled my {:?}", nums);
+
+    let rand_string: String = thread_rng()
+        .sample_iter(&rand::distributions::Alphanumeric)
+        .take(30)
+        .map(char::from)
+        .collect();
+    println!("rand string : {}", rand_string);
 }

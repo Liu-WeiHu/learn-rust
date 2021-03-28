@@ -50,6 +50,7 @@
       <sourceFolder url="file://$MODULE_DIR$/macro_rules/macro_rules-demo/examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/macro_rules/macro_rules-demo4/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/demo/demo/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wasm-bindgen/learn-bindgen/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />

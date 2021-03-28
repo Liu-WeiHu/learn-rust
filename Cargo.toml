@@ -44,4 +44,6 @@ members = [
     "toml/learn-toml",
     #tokio
     "tokio/my-redis",
+    #wasm-bindgen
+    "wasm-bindgen/learn-bindgen",
 ]
