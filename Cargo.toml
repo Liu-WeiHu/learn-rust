@@ -23,6 +23,7 @@ members = [
     "proc-macro/derive-demo",
     # learn rust web (actix-web)
     "actix-web/rust-web-project",
+    "actix-web/actix-demo",
     # demo
     "demo/demo",
     "demo/toml-demo",
@@ -45,5 +46,8 @@ members = [
     #tokio
     "tokio/my-redis",
     #wasm-bindgen
-    "wasm-bindgen/learn-bindgen",
+    "wasm-bindgen/hello-world",
+    "wasm-bindgen/console_log",
+    "wasm-bindgen/add",
+    "wasm-bindgen/without-a-bundler",
 ]

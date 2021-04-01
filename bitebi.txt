@@ -1,0 +1,47 @@
+比特币是一种基于分布式网络的数字货币。
+比特币系统（广义的比特币）则是用来构建这种数字货币的网络系统，是一个分布式的点对点网络系统。
+
+Hash(序号0、记账时间、交易记录) = 787635ACD -创世块
+Hash(上一个Hash值、序号1、记账时间、交易记录) = 456635BCD
+
+地址： 2A39CBa2390FDe
+私钥： sdgHsdniNIhdsgaKIhkgnakgaihNKHIskdgal
+
+//私钥两次私钥后得到地址
+Hash(Hash(fun(sdgHsdniNIhdsgaKIhkgnakgaihNKHIskdgal)))  -> 2A39CBa2390FDe
+
+{
+    "付款地址"："2A39CBa2390FDe"
+    "收款地址"："AAC9CBa239aFcc"
+    "金额"："0.2btc"
+}
+
+//1.对交易进行hash， 得到一个摘要信息（Hash值）
+hash(
+        '{"付款地址"："2A39CBa2390FDe",
+        "收款地址"："AAC9CBa239aFcc",
+        "金额"："0.2btc"
+        }'
+    ) -> 8aDB23CDEA6
+
+//2.用私钥对交易摘要进行签名（付款方在安全的环境下进行，以避免私钥泄密）, 用代码表示大概是这样。
+#参数1为交易摘要
+#参数2为私钥
+#返回签名信息
+sign("8aDB23CDEA6", "J78sknJhidhLIqdngalket") -> "3cdferdadgadg"
+
+//验证 （实际还会验证付款账号有没有足够的余额，我们暂时忽略这点）
+#参数1为签名信息
+#参数2为付款方地址
+#返回交易摘要
+verify("3cdferdadgadg", "2A39CBa2390FDe") -> "8aDB23CDEA6"
+
+//如果验证输出的信息和原始交易信息的hash一致，则验证通过，记录账本，用代码表示大概是这样：
+if(verify("3cdferdadgadg", "2A39CBa2390FDe")
+    == hash('{"付款地址"："2A39CBa2390FDe",
+              "收款地址"："AAC9CBa239aFcc",
+              "金额"："0.2btc"}')) :
+    # 写入账本
+    # 广播
+else:
+   # donothing

@@ -324,3 +324,11 @@ fn test_duotai() {
 trait Person {}
 struct Studen;
 impl Person for Studen{}
+
+#[test]
+fn test_a() {
+    struct A;
+    let a = A;
+    println!("{:p}", &a);
+    println!("{}", std::mem::size_of_val(&a));
+}

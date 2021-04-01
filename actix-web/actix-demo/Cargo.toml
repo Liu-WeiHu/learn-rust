@@ -1,9 +1,11 @@
 [package]
-name = "learn-bindgen"
+name = "actix-demo"
 version = "0.1.0"
-authors = ["Liu-WeiHu <6460176@qq.com>"]
+authors = ["liuweihu <6460176@qq.com>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+actix-web = "3.3.2"
+serde = {version = "1.0.125", features = ["derive"]}

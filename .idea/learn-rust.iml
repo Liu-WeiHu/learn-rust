@@ -50,7 +50,11 @@
       <sourceFolder url="file://$MODULE_DIR$/macro_rules/macro_rules-demo/examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/macro_rules/macro_rules-demo4/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/demo/demo/examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/wasm-bindgen/learn-bindgen/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wasm-bindgen/console_log/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wasm-bindgen/add/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wasm-bindgen/hello-world/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wasm-bindgen/without-a-bundler/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/actix-web/actix-demo/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />

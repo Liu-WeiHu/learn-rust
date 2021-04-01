@@ -1,1 +1,9 @@
 /target
+.idea
+node_modules
+.vscode
+pkg
+
+
+package-lock.json
+Cargo.lock
