@@ -1,4 +1,4 @@
-use actix_web::{get, App, Responder, HttpResponse, HttpServer, HttpRequest};
+use actix_web::{get, post, App, Responder, HttpResponse, HttpServer, HttpRequest, web, guard};
 use serde::Serialize;
 
 #[derive(Serialize)]
@@ -13,14 +13,22 @@ async fn get_name_by_id(req: HttpRequest) -> impl Responder {
         .json(Res{result: format!("{} 你好！", name)})
 }
 
+#[post("/pos")]
+async fn pos() -> impl Responder {
+    "aaa"
+}
+
 #[actix_web::main]
-async fn main() -> std::io::Result<()> {
-    println!("127.0.0.1:8082/李四");
+async fn main() -> anyhow::Result<()> {
     HttpServer::new(||{
         App::new()
-            .service(get_name_by_id)
+            .service(
+                web::scope("/v1")
+                    .service(get_name_by_id)
+                    .service(pos)
+            )
     })
-    .bind("127.0.0.1:8082")?
+    .bind("127.0.0.1:8082")
     .run()
     .await
 }

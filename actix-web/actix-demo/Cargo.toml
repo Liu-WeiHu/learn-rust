@@ -9,3 +9,5 @@ edition = "2018"
 [dependencies]
 actix-web = "3.3.2"
 serde = {version = "1.0.125", features = ["derive"]}
+anyhow = "1.0.38"
+thiserror = "1.0.24"

@@ -42,7 +42,9 @@ name = "actix-demo"
 version = "0.1.0"
 dependencies = [
  "actix-web",
+ "anyhow",
  "serde",
+ "thiserror",
 ]
 
 [[package]]
@@ -2504,6 +2506,9 @@ dependencies = [
 [[package]]
 name = "test-example"
 version = "0.1.0"
+dependencies = [
+ "anyhow",
+]
 
 [[package]]
 name = "textwrap"

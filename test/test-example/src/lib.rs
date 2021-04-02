@@ -3,6 +3,8 @@ use std::thread::sleep;
 use std::time::Duration;
 use std::ops::Deref;
 use std::rc::Rc;
+use std::str::Bytes;
+use std::io::Read;
 
 #[test]
 fn test_hello() {
@@ -331,4 +333,37 @@ fn test_a() {
     let a = A;
     println!("{:p}", &a);
     println!("{}", std::mem::size_of_val(&a));
+}
+
+#[test]
+fn test_literal() {
+    let s = &44i32;
+    let ss = &44i32;
+    const sss: i32 = 44i32;
+    println!("{:p}", s);
+    println!("{:p}", ss);
+    println!("{:p}", &sss);
+
+    let a: &String = &"aa".to_string();
+    let aa: &String = &"aa".to_string();
+    //const aaa: String = "aa".to_string();
+    println!("{:?}", a.as_ptr());
+    println!("{:?}", aa.as_ptr());
+    //println!("{:p}", &aaa);
+}
+
+#[test]
+fn test_aaa() {
+    match read_demo() {
+        Ok(()) => (),
+        Err(e) => println!("{:?}", e)
+    }
+}
+
+fn read_demo() -> anyhow::Result<()> {
+    let mut f = std::fs::File::open("aa.txt")?;
+    let mut s = String::new();
+    f.read_to_string(&mut s);
+    println!("{}", s);
+    Ok(())
 }
