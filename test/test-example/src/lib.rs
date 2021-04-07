@@ -5,6 +5,7 @@ use std::ops::Deref;
 use std::rc::Rc;
 use std::str::Bytes;
 use std::io::Read;
+use std::collections::HashMap;
 
 #[test]
 fn test_hello() {
@@ -366,4 +367,69 @@ fn read_demo() -> anyhow::Result<()> {
     f.read_to_string(&mut s);
     println!("{}", s);
     Ok(())
+}
+
+/*#[test]
+fn test_demo2() {
+    let mut map = HashMap::new();
+    map.insert(1, "aa".to_string());
+    let key = 1usize;
+    let s = get_default(&mut map, key);
+    println!("{}", s);
+}
+
+fn get_default(map: &mut HashMap<usize, String>, key: usize) -> &mut String {
+    /*if let Some(value) = map.get_mut(&key) {
+        /*unsafe {
+            &mut *(value as *mut String)
+        }*/
+        value
+    } else {
+        map.insert(key, "bb".to_string());
+        map.get_mut(&key).unwrap()
+    }*/
+    let res = map.get_mut(&key);
+    map.insert(2, "c".to_string());
+    if let Some(value) = res {
+        value
+    } else {
+        let mut r = "aa".to_string();
+        &mut r
+    }
+}*/
+
+#[test]
+fn test_aaaa() {
+}
+
+struct D(i32);
+
+impl Drop for D {
+    fn drop(&mut self) {
+        println!("drop {}", self.0);
+    }
+}
+
+#[test]
+fn test_aaaaa() {
+    {
+        D(0);
+        let x = D(1);
+        let _ = D(2);
+        x;
+        D(3);
+        let y = D(4);
+        let _ = D(5);
+    }
+
+    {
+        let a = D(6);
+        let _ = a;
+        //a;
+        D(7);
+    }
+
+    D(8);
+    let d = D(9);
+    d;
 }
