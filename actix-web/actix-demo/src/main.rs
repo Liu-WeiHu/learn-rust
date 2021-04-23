@@ -19,7 +19,7 @@ async fn pos() -> impl Responder {
 }
 
 #[actix_web::main]
-async fn main() -> anyhow::Result<()> {
+async fn main() -> std::io::Result<()> {
     HttpServer::new(||{
         App::new()
             .service(
@@ -28,7 +28,7 @@ async fn main() -> anyhow::Result<()> {
                     .service(pos)
             )
     })
-    .bind("127.0.0.1:8082")
+    .bind("127.0.0.1:8082")?
     .run()
     .await
 }

@@ -6,6 +6,7 @@ use std::rc::Rc;
 use std::str::Bytes;
 use std::io::Read;
 use std::collections::HashMap;
+use std::borrow::Cow;
 
 #[test]
 fn test_hello() {
@@ -57,6 +58,7 @@ fn test_static() {
     
 }
 
+#[derive(Debug, Clone)]
 struct User { name: String, age: u8, }
 enum People { User(User), Teacher, }
 #[test]
@@ -400,6 +402,10 @@ fn get_default(map: &mut HashMap<usize, String>, key: usize) -> &mut String {
 
 #[test]
 fn test_aaaa() {
+    let mut v = vec![1,2,3];
+    let vv = &mut v;
+    (*vv).push(4);
+    println!("{:?}", v);
 }
 
 struct D(i32);
@@ -432,4 +438,13 @@ fn test_aaaaa() {
     D(8);
     let d = D(9);
     d;
+}
+
+#[test]
+fn test_deref2() {
+    let v = vec![1,2,3];
+    let mut cow: Cow<[_]> = Cow::Owned(v);
+    // let hello = cow.to_mut();
+    let hello = cow.into_owned();
+
 }

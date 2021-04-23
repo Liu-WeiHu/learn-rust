@@ -57,6 +57,9 @@
       <sourceFolder url="file://$MODULE_DIR$/actix-web/actix-demo/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/proc-macro/proc-macro-demo/examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/proc-macro/proc-macro-demo/proc-macro-fnd_by_or/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/actix-web/actix-demo/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/diesel/learn-diesel/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/test-example/examples" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />

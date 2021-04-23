@@ -1,6 +1,5 @@
 use thiserror::Error;
 use std::str::Chars;
-use std::error::Error;
 
 #[derive(Error, Debug)]
 enum MyError<'a> {
@@ -22,7 +21,7 @@ fn main() {
     }
 }
 
-fn t_id(id: i32) -> Result<i32,Box<dyn Error>> {
+fn t_id(id: i32) -> Result<i32,Box<dyn std::error::Error>> {
     if id <= 0 {
         return Err(MyError::NotNil("ID").into());
     }
