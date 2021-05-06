@@ -50,6 +50,4 @@ members = [
     "wasm-bindgen/console_log",
     "wasm-bindgen/add",
     "wasm-bindgen/without-a-bundler",
-    #diesel
-    "diesel/learn-diesel",
 ]
