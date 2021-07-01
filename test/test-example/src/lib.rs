@@ -371,34 +371,10 @@ fn read_demo() -> anyhow::Result<()> {
     Ok(())
 }
 
-/*#[test]
-fn test_demo2() {
-    let mut map = HashMap::new();
-    map.insert(1, "aa".to_string());
-    let key = 1usize;
-    let s = get_default(&mut map, key);
-    println!("{}", s);
+#[test]
+fn test_bbb() {
+    (1..=5).for_each(|i| println!("{}", vec!["*"; i].join(" ")))
 }
-
-fn get_default(map: &mut HashMap<usize, String>, key: usize) -> &mut String {
-    /*if let Some(value) = map.get_mut(&key) {
-        /*unsafe {
-            &mut *(value as *mut String)
-        }*/
-        value
-    } else {
-        map.insert(key, "bb".to_string());
-        map.get_mut(&key).unwrap()
-    }*/
-    let res = map.get_mut(&key);
-    map.insert(2, "c".to_string());
-    if let Some(value) = res {
-        value
-    } else {
-        let mut r = "aa".to_string();
-        &mut r
-    }
-}*/
 
 #[test]
 fn test_aaaa() {
