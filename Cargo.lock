@@ -1123,6 +1123,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "handle-errors"
+version = "0.1.0"
+dependencies = [
+ "warp",
+]
+
+[[package]]
 name = "handlebars"
 version = "3.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2679,6 +2686,7 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "lazy_static",
+ "serde",
  "tokio 1.7.1",
 ]
 
@@ -3299,6 +3307,38 @@ dependencies = [
 name = "warp_demo"
 version = "0.1.0"
 dependencies = [
+ "serde",
+ "serde_json",
+ "tokio 1.7.1",
+ "warp",
+]
+
+[[package]]
+name = "warp_practical"
+version = "0.1.0"
+dependencies = [
+ "serde",
+ "tokio 1.7.1",
+ "warp",
+]
+
+[[package]]
+name = "warp_practical_2"
+version = "0.1.0"
+dependencies = [
+ "parking_lot",
+ "serde",
+ "serde_json",
+ "tokio 1.7.1",
+ "warp",
+]
+
+[[package]]
+name = "warp_practical_3"
+version = "0.1.0"
+dependencies = [
+ "handle-errors",
+ "parking_lot",
  "serde",
  "serde_json",
  "tokio 1.7.1",

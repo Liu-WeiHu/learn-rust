@@ -51,5 +51,8 @@ members = [
     "wasm-bindgen/add",
     "wasm-bindgen/without-a-bundler",
     #warp
-    "warp/warp_demo"
+    "warp/warp_demo",
+    "warp/warp_practical",
+    "warp/warp_practical_2",
+    "warp/warp_practical_3",
 ]
